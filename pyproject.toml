@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "beauty-link"
+version = "0.1.0"
+description = ""
+authors = ["dovgalb <bogdandovgal1208@gmail.com>"]
+readme = "README.md"
+packages = [{include = "beauty_link"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.101.1"
+uvicorn = "^0.23.2"
+pydantic = "^2.2.0"
+sqlalchemy = "^2.0.20"
+alembic = "^1.11.3"
+asyncpg = "^0.28.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
