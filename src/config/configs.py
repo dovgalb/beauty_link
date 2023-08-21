@@ -6,7 +6,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional
 
-from pydantic import BaseSettings, FilePath, PostgresDsn, validator
+from pydantic import FilePath, PostgresDsn, validator, BaseSettings
+# from pydantic_settings import BaseSettings
 
 APP_DIR = Path(__file__).resolve(strict=True).parent.parent
 

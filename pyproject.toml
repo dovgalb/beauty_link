@@ -1,19 +1,23 @@
 [tool.poetry]
-name = "beauty-link"
+name = "poetry-env-test"
 version = "0.1.0"
 description = ""
 authors = ["dovgalb <bogdandovgal1208@gmail.com>"]
 readme = "README.md"
-packages = [{include = "beauty_link"}]
+packages = [{include = "poetry_env_test"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-fastapi = "^0.101.1"
-uvicorn = "^0.23.2"
-pydantic = "^2.2.0"
-sqlalchemy = "^2.0.20"
-alembic = "^1.11.3"
-asyncpg = "^0.28.0"
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.95.2"}
+SQLAlchemy = "^2.0.15"
+alembic = "^1.11.1"
+python-dotenv = "^1.0.0"
+uvicorn = "^0.22.0"
+aiosqlite = "^0.19.0"
+asyncpg = "^0.27.0"
+psycopg2 = "^2.9.7"
+fastapi-users = "^12.1.1"
+
 
 
 [build-system]
