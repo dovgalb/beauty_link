@@ -21,4 +21,24 @@ async def create_service(
         data: CreateServiceScheme,
         service=Depends(services_service)
 ):
+    """Создание услуги"""
     return await service._create(data)
+
+
+@services_router.put('/{service_id}', response_model=UpdateServiceScheme)
+async def update_service(
+        service_id: int,
+        data: UpdateServiceScheme,
+        service=Depends(services_service)
+
+):
+    """Обновляет услугу"""
+    return await service._update(entity_id=service_id, data=data)
+
+
+@services_router.delete('/{service_id}')
+async def delete_service(
+        service_id: int,
+        service=Depends(services_service)
+):
+    return await service._delete(entity_id=service_id)

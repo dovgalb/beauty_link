@@ -13,6 +13,7 @@ class ServicesInfo(BaseModel):
     description: Optional[str]
     price: int
     duration: int
+    is_active: bool
     master_id: int
 
     class Config:
@@ -28,6 +29,7 @@ class CreateServiceScheme(BaseModel):
     description: Optional[str]
     price: int
     duration: int
+    is_active: bool
     master_id: int
 
 
@@ -39,3 +41,5 @@ class UpdateServiceScheme(BaseModel):
     description: Optional[str]
     price: int
     duration: int
+    is_active: bool
+

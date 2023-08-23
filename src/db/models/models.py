@@ -38,6 +38,7 @@ class Service(Base):
     description = mapped_column(String(500), nullable=True)
     price = mapped_column(Integer)
     duration = mapped_column(Integer)
+    is_active = mapped_column(Boolean, default=True)
 
     master_id = mapped_column(Integer, ForeignKey('masters.id'))
     master = relationship("Master", back_populates="services")

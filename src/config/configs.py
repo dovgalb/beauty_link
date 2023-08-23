@@ -27,6 +27,9 @@ class Settings(BaseSettings):
     service_port: int = 8000
     service_title: str = "api"
 
+    # AUTH
+    secret: str = "secret"
+
     # DB
     host: str = "127.0.0.1"
     port: str = "5432"
