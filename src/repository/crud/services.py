@@ -1,4 +1,4 @@
-from src.db.models.models import Service
+from src.db.models import Service
 from src.repository.crud.base import SQLAlchemyCRUD
 from src.schemas.services import CreateServiceScheme, UpdateServiceScheme
 

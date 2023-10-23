@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["dovgalb <bogdandovgal1208@gmail.com>"]
 readme = "README.md"
-packages = [{include = "poetry_env_test"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -12,11 +11,12 @@ fastapi = {extras = ["all"], version = "^0.95.2"}
 SQLAlchemy = "^2.0.15"
 fastapi-users-db-sqlalchemy = "6.0.1"
 alembic = "^1.11.1"
+pydantic = "^1.8.1"
 python-dotenv = "^1.0.0"
 uvicorn = "^0.22.0"
 aiosqlite = "^0.19.0"
 asyncpg = "^0.27.0"
-psycopg2 = "^2.9.7"
+psycopg2-binary = "^2.9.7"
 fastapi-users = {extras = ["sqlalchemy"], version = "^12.1.1"}
 
 

@@ -1,4 +1,4 @@
-from src.db.models.models import Service
+from src.db.models import Service
 from src.repository.filter.base import SqlAlchemyFilter
 
 

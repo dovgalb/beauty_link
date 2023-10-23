@@ -3,6 +3,7 @@ from sqlalchemy.orm import mapped_column, relationship, backref, Mapped
 from sqlalchemy import ForeignKey, String, Integer, Boolean, TIMESTAMP, DateTime, Time, func
 from fastapi_users.db import SQLAlchemyBaseUserTableUUID
 
+from src.db.base import Base
 
 class User(Base, SQLAlchemyBaseUserTableUUID):
     __tablename__ = "users"
