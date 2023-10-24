@@ -2,33 +2,30 @@ version: "3.7"
 
 
 services:
-#  api:
-#    container_name: bl_api
-#    build:
-#      context: .
-#      network: host
-#    ports:
-#      - "8088:8000"
-#    volumes:
-#      - .:/code
-#    restart: always
-#    command: bash -c "alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
-#    environment:
-#      - POSTGRES_HOST=bl_db_host
-#      - POSTGRES_PORT=5432
-#    env_file:
-#      - src/config/.env
-#    depends_on:
-#      - postgres
+  api:
+    container_name: bl_api
+    build:
+      context: .
+      network: host
+    ports:
+      - "8088:8000"
+    volumes:
+      - .:/code
+    restart: always
+    command: bash -c "uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+    env_file:
+      - src/config/.env
+    depends_on:
+      - postgres
 
   postgres:
     container_name: beauty_link_db
-#    hostname: bl_db_host
+    hostname: bl_db_host
     image: postgres:13.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
-      - "5438:5432"
+      - "5433:5432"
     env_file:
       - src/config/.env
 
