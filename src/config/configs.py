@@ -21,6 +21,10 @@ class Settings(BaseSettings):
     allow_unauthorized: bool = False
     https_proxy_enabled: bool = True
 
+    # AUTH
+
+    secret: str = "secret"
+
     # SERVICE
     service_host: str = "0.0.0.0"
     service_port: int = 8000

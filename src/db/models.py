@@ -5,6 +5,7 @@ from fastapi_users.db import SQLAlchemyBaseUserTableUUID
 
 from src.db.base import Base
 
+
 class User(Base, SQLAlchemyBaseUserTableUUID):
     __tablename__ = "users"
 
